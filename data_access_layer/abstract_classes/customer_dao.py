@@ -5,7 +5,6 @@ from entities.customers import Customer
 
 class CustomerDao(ABC):
 
-    # create new customer method
     @abstractmethod
     def create_customer_entry(self, customer: Customer) -> Customer:
         pass
@@ -41,4 +40,3 @@ class CustomerDao(ABC):
     @abstractmethod
     def delete_customer_by_id(self, customer_id: int) -> bool:
         pass
-    
