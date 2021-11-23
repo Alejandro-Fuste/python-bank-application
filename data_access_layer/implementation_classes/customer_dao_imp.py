@@ -10,7 +10,7 @@ class CustomerDaoImp(CustomerDao):
 
     # "database" list
     customer_list = [customer_one, customer_two, customer_to_delete]
-    
+
     # id generator
     customer_id_generator = 4
 
