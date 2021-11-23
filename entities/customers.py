@@ -21,11 +21,12 @@ class Customer:
 
 # add method to create an account
 
-# customer_1 = Customer("Luke", "Skywalker", "Master Jedi", 1,
-#                       {"1": {"type": "checking", "balance": 100},
-#                        "2": {"type": "saving", "balance": 1000}})
+customer_1 = Customer("Luke", "Skywalker", "Master Jedi", 1,
+                      {"1": {"type": "checking", "balance": 100},
+                       "2": {"type": "saving", "balance": 1000}})
 # customer_dict = customer_1.make_customer_dictionary()
 # print(customer_1)
 # print(customer_1.make_customer_dictionary())
 # print(customer_dict['accounts']['1'])
 # print(customer_dict['accounts']['2'])
+print(customer_1.accounts['1'])

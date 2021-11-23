@@ -20,7 +20,7 @@ class CustomerDaoImp(CustomerDao):
 
     def get_customer_balance_by_id(self, customer_id: int) -> Customer:
         pass
-
+    #     use get dictionary method...set second argument to zero
     def deposit_into_account_by_id(self, customer_id: int) -> Customer:
         pass
 
