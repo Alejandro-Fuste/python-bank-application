@@ -3,10 +3,18 @@ from entities.customers import Customer
 
 
 class CustomerDaoImp(CustomerDao):
-    # add starting instances
-    # add "database" list
-    # add id generator
+    # starting instances
+    customer_one = Customer("Luke", "Skywalker", "Master Luke", 1, {})
+    customer_two = Customer("Leia", "Organa", "Princess Leia", 2, {})
+    customer_to_delete = Customer("Anakin", "Skywalker", "Cancel Me", 3, {})
 
+    # "database" list
+    customer_list = [customer_one, customer_two, customer_to_delete]
+    
+    # id generator
+    customer_id_generator = 4
+
+    # methods that perform bank actions
     def create_customer_entry(self, customer: Customer) -> Customer:
         pass
 

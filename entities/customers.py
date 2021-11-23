@@ -19,6 +19,6 @@ class Customer:
         }
 
 
-customer_1 = Customer("Luke", "Skywalker", "Master Jedi", 1, {"checking": {}})
-print(customer_1)
-print(customer_1.make_customer_dictionary())
+# customer_1 = Customer("Luke", "Skywalker", "Master Jedi", 1, {"checking": {}})
+# print(customer_1)
+# print(customer_1.make_customer_dictionary())
