@@ -33,7 +33,9 @@ def withdraw_from_account_by_id_success():
 
 
 def transfer_money_between_accounts_by_their_ids_success():
-    pass
+    to_account_original_balance = customer_dao_imp.get_customer_balance_by_id(1)
+    to_account_new_balance = customer_dao_imp.transfer_money_by_their_ids(2, 1, 100)
+    raise to_account_new_balance > to_account_original_balance
 
 
 def update_customer_by_id_success():
