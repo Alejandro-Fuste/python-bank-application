@@ -43,9 +43,10 @@ def get_customer_by_id_success():
 
 
 def delete_account_by_id_success():
-    selected_account = customer_dao_imp.delete_account_by_id(3)
+    selected_account = customer_dao_imp.delete_account_by_id(6)
     assert selected_account
 
 
 def delete_customer_by_id_success():
     selected_customer = customer_dao_imp.delete_customer_by_id(3)
+    assert selected_customer
