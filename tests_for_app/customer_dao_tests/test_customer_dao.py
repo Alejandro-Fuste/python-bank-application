@@ -3,11 +3,11 @@ from entities.customers import Customer
 
 customer_dao_imp = CustomerDaoImp()
 customer = Customer("Luke", "Skywalker", "Master Jedi", 1,
-                    {"1": {"type": "checking", "balance": 100},
-                     "2": {"type": "saving", "balance": 1000}})
+                    {1: {"type": "checking", "balance": 100},
+                     2: {"type": "saving", "balance": 1000}})
 updated_info = Customer("Luke", "Skywalker", "Master Luke", 1,
-                       {"1": {"type": "checking", "balance": 100},
-                        "2": {"type": "saving", "balance": 1000}})
+                        {1: {"type": "checking", "balance": 100},
+                         2: {"type": "saving", "balance": 1000}})
 
 
 def test_create_customer_entry_success():
@@ -21,11 +21,15 @@ def get_customer_balance_by_id_success():
 
 
 def deposit_into_account_by_id_success():
-    pass
+    original_balance = customer_dao_imp.get_customer_balance_by_id(1)
+    new_balance = customer_dao_imp.deposit_into_account_by_id(1, 100)
+    assert new_balance > original_balance
 
 
 def withdraw_from_account_by_id_success():
-    pass
+    original_balance = customer_dao_imp.get_customer_balance_by_id(1)
+    new_balance = customer_dao_imp.deposit_into_account_by_id(1, 100)
+    assert new_balance < original_balance
 
 
 def transfer_money_between_accounts_by_their_ids_success():
