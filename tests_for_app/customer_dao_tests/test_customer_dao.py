@@ -34,16 +34,18 @@ def transfer_money_between_accounts_by_their_ids_success():
 
 def update_customer_by_id_success():
     updated_customer: Customer = customer_dao_imp.update_customer_by_id(updated_info)
-    assert updated_customer.user_name
+    assert updated_customer.user_name == updated_info.user_name
 
 
 def get_customer_by_id_success():
-    pass
+    selected_customer = customer_dao_imp.get_customer_by_id(1)
+    assert selected_customer.customer_id == 1
 
 
 def delete_account_by_id_success():
-    pass
+    selected_account = customer_dao_imp.delete_account_by_id(3)
+    assert selected_account
 
 
 def delete_customer_by_id_success():
-    pass
+    selected_customer = customer_dao_imp.delete_customer_by_id(3)

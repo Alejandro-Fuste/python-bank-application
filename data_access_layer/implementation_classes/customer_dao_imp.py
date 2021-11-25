@@ -4,9 +4,12 @@ from entities.customers import Customer
 
 class CustomerDaoImp(CustomerDao):
     # starting instances
-    customer_one = Customer("Luke", "Skywalker", "Master Luke", 1, {})
-    customer_two = Customer("Leia", "Organa", "Princess Leia", 2, {})
-    customer_to_delete = Customer("Anakin", "Skywalker", "Cancel Me", 3, {})
+    customer_one = Customer("Luke", "Skywalker", "Master Luke", 1, {1: {"type": "checking", "balance": 100},
+                                                                    2: {"type": "saving", "balance": 1000}})
+    customer_two = Customer("Leia", "Organa", "Princess Leia", 2, {3: {"type": "checking", "balance": 100},
+                                                                   4: {"type": "saving", "balance": 1000}})
+    customer_to_delete = Customer("Anakin", "Skywalker", "Cancel Me", 3, {5: {"type": "checking", "balance": 100},
+                                                                          6: {"type": "saving", "balance": 1000}})
 
     # "database" list
     customer_list = [customer_one, customer_two, customer_to_delete]
