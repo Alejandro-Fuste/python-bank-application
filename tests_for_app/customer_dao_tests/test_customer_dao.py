@@ -2,12 +2,12 @@ from data_access_layer.implementation_classes.customer_dao_imp import CustomerDa
 from entities.customers import Customer
 
 customer_dao_imp = CustomerDaoImp()
-customer = Customer("Luke", "Skywalker", "Master Jedi", 1,
-                    {1: {"type": "checking", "balance": 100},
-                     2: {"type": "saving", "balance": 1000}})
-updated_info = Customer("Luke", "Skywalker", "Master Luke", 1,
-                        {1: {"type": "checking", "balance": 100},
-                         2: {"type": "saving", "balance": 1000}})
+customer = Customer("Rey", "NoLastName", "cat girl", 4,
+                    {7: {"type": "checking", "balance": 100},
+                     8: {"type": "saving", "balance": 1000}})
+updated_info = Customer("Rey", "Skywalker", "Jedi Knight", 4,
+                        {7: {"type": "checking", "balance": 100},
+                         8: {"type": "saving", "balance": 1000}})
 
 
 def test_create_customer_entry_success():

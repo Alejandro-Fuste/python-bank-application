@@ -19,7 +19,10 @@ class CustomerDaoImp(CustomerDao):
 
     # methods that perform bank actions
     def create_customer_entry(self, customer: Customer) -> Customer:
-        pass
+        customer.customer_id = CustomerDaoImp.customer_id_generator
+        CustomerDaoImp.customer_id_generator += 1
+        CustomerDaoImp.customer_list.append(customer)
+        return customer
 
     def get_customer_balance_by_id(self, customer_id: int) -> int:
         pass
