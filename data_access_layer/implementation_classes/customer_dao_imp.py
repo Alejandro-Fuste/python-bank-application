@@ -20,17 +20,18 @@ class CustomerDaoImp(CustomerDao):
 
     def get_customer_balance_by_id(self, customer_id: int) -> Customer:
         pass
+
     #     use get dictionary method...set second argument to zero
-    def deposit_into_account_by_id(self, customer_id: int) -> Customer:
+    def deposit_into_account_by_id(self, customer_id: int, amount: int) -> Customer:
         pass
 
-    def withdraw_from_account_by_id(self, customer_id: int) -> Customer:
+    def withdraw_from_account_by_id(self, customer_id: int, amount: int) -> Customer:
         pass
 
-    def transfer_money_between_accounts_by_their_ids(self, from_account_id: int, to_account_id: int) -> Customer:
+    def transfer_money_by_their_ids(self, from_account_id: int, to_account_id: int, amount: int) -> Customer:
         pass
 
-    def update_customer_by_id(self, customer_id: int) -> Customer:
+    def update_customer_by_id(self, customer: Customer) -> Customer:
         pass
 
     def get_customer_by_id(self, customer_id: int) -> Customer:

@@ -14,19 +14,19 @@ class CustomerDao(ABC):
         pass
 
     @abstractmethod
-    def deposit_into_account_by_id(self, customer_id: int) -> Customer:
+    def deposit_into_account_by_id(self, customer_id: int, amount: int) -> Customer:
         pass
 
     @abstractmethod
-    def withdraw_from_account_by_id(self, customer_id: int) -> Customer:
+    def withdraw_from_account_by_id(self, customer_id: int, amount: int) -> Customer:
         pass
 
     @abstractmethod
-    def transfer_money_between_accounts_by_their_ids(self, from_account_id: int, to_account_id: int) -> Customer:
+    def transfer_money_by_their_ids(self, from_account_id: int, to_account_id: int, amount: int) -> Customer:
         pass
 
     @abstractmethod
-    def update_customer_by_id(self, customer_id: int) -> Customer:
+    def update_customer_by_id(self, customer: Customer) -> Customer:
         pass
 
     @abstractmethod
