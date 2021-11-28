@@ -71,13 +71,18 @@ class CustomerDaoImp(CustomerDao):
                 return True
 
     def delete_customer_by_id(self, customer_id: str) -> bool:
-        pass
+        for customer in CustomerDaoImp.customer_list:
+            if customer.customer_id == customer_id:
+                index = CustomerDaoImp.customer_list.index(customer)
+                del CustomerDaoImp.customer_list[index]
+                return True
 
 
 new_cus = CustomerDaoImp()
 
 # print(new_cus.withdraw_from_account_by_id('1', 1, 100))
 # print(new_cus.transfer_money_by_their_ids('1', 2, 1, 100))
-print(new_cus.delete_account_by_id('3', 6))
-print(new_cus.get_customer_by_id("3"))
+# print(new_cus.delete_account_by_id('3', 6))
+print(new_cus.delete_customer_by_id("3"))
+print(new_cus.customer_list)
 # print(new_cus.get_customer_balance_by_id("1", 1))
