@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6d25695e-333c-4fd6-ba56-07af27a9c4e6" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/customer_exceptions/customer_not_found_exception.py" beforeDir="false" afterPath="$PROJECT_DIR$/customer_exceptions/customer_not_found_exception.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer_exceptions/invalid_transaction_exception.py" beforeDir="false" afterPath="$PROJECT_DIR$/customer_exceptions/invalid_transaction_exception.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
