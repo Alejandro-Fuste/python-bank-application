@@ -7,7 +7,6 @@
     <list default="true" id="6d25695e-333c-4fd6-ba56-07af27a9c4e6" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data_access_layer/implementation_classes/customer_dao_imp.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_access_layer/implementation_classes/customer_dao_imp.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/entities/customers.py" beforeDir="false" afterPath="$PROJECT_DIR$/entities/customers.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,7 +50,7 @@
       <recent name="$PROJECT_DIR$/entitie" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.customer_dao_imp">
+  <component name="RunManager" selected="Python tests.Python tests in test_customer_dao.py">
     <configuration name="customer_dao_imp" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="python-bank-application" />
       <option name="INTERPRETER_OPTIONS" value="" />
