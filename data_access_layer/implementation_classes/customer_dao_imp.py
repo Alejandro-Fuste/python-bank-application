@@ -56,8 +56,9 @@ class CustomerDaoImp(CustomerDao):
     def update_customer_by_id(self, customer_id: str, customer: Customer) -> Customer:
         for cust in CustomerDaoImp.customer_list:
             if cust.customer_id == customer_id:
-                cust.user_name = customer.user_name
-                return cust
+                index = CustomerDaoImp.customer_list.index(cust)
+                CustomerDaoImp.customer_list[index] = customer
+                return customer
 
     def get_customer_by_id(self, customer_id: str) -> Customer:
         for customer in CustomerDaoImp.customer_list:
@@ -83,6 +84,9 @@ new_cus = CustomerDaoImp()
 # print(new_cus.withdraw_from_account_by_id('1', 1, 100))
 # print(new_cus.transfer_money_by_their_ids('1', 2, 1, 100))
 # print(new_cus.delete_account_by_id('3', 6))
-print(new_cus.delete_customer_by_id("3"))
-print(new_cus.customer_list)
+# print(new_cus.delete_customer_by_id("3"))
+# print(new_cus.customer_list)
 # print(new_cus.get_customer_balance_by_id("1", 1))
+updated_info = Customer("Luke", "Skywalker", "master jedi", "1", {1: {"type": "checking", "balance": 100},
+                                                                  2: {"type": "saving", "balance": 1000}})
+print(new_cus.update_customer_by_id('1', updated_info))
