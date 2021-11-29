@@ -7,11 +7,15 @@ from service_layer.abstract_services.customer_service import CustomerService
 
 
 class CustomerServiceImp(CustomerService):
-    def __init__(self, customer_dao):
-        self.customer_dao: CustomerDaoImp = customer_dao
+    def __init__(self, customer_dao: CustomerDaoImp):
+        self.customer_dao = customer_dao
 
     def create_customer_entry(self, customer: Customer) -> Customer:
-        pass
+        for current_customer in self.customer_dao.customer_list:
+            if current_customer.customer_id == customer.customer_id or current_customer.user_name == customer.user_name:
+                raise DuplicateCustomerException("This account already exists")
+            else:
+                return self.customer_dao.create_customer_entry(customer)
 
     def get_customer_balance_by_id(self, customer_id: str, account_id: int) -> int:
         pass
@@ -37,3 +41,9 @@ class CustomerServiceImp(CustomerService):
 
     def delete_customer_by_id(self, customer_id: int) -> bool:
         pass
+
+
+new_object = CustomerServiceImp(CustomerService)
+duplicate = Customer("Luke", "Skywalker", "master jedi", "1", {1: {"type": "checking", "balance": 100},
+                                                                  2: {"type": "saving", "balance": 1000}})
+print(new_object.create_customer_entry(duplicate))
