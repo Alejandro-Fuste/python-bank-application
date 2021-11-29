@@ -42,8 +42,3 @@ class CustomerServiceImp(CustomerService):
     def delete_customer_by_id(self, customer_id: int) -> bool:
         pass
 
-
-new_object = CustomerServiceImp(CustomerService)
-duplicate = Customer("Luke", "Skywalker", "master jedi", "1", {1: {"type": "checking", "balance": 100},
-                                                                  2: {"type": "saving", "balance": 1000}})
-print(new_object.create_customer_entry(duplicate))
