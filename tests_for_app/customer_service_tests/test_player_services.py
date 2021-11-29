@@ -27,3 +27,52 @@ def test_validate_update_customer_method():
         assert False
     except DuplicateCustomerException as e:
         assert str(e) == "That username has already been taken"
+
+
+def test_validate_deposit_method():
+    try:
+        pass
+    except InvalidTransactionException as e:
+        assert str(e) == "This transaction can not be completed"
+
+
+def test_validate_withdraw_method():
+    try:
+        pass
+    except InvalidTransactionException as e:
+        assert str(e) == "This transaction can not be completed"
+
+
+def test_validate_transfer_method():
+    try:
+        pass
+    except InvalidTransactionException as e:
+        assert str(e) == "This transaction can not be completed"
+
+
+def test_validate_get_balance_method():
+    try:
+        pass
+    except CustomerNotFoundException as e:
+        assert str(e) == "This customer was not found"
+
+
+def test_validate_get_customer_method():
+    try:
+        pass
+    except CustomerNotFoundException as e:
+        assert str(e) == "This customer was not found"
+
+
+def test_validate_delete_account_method():
+    try:
+        pass
+    except CustomerNotFoundException as e:
+        assert str(e) == "This account was not found"
+
+
+def test_validate_delete_customer_method():
+    try:
+        pass
+    except CustomerNotFoundException as e:
+        assert str(e) == "This customer was not found"

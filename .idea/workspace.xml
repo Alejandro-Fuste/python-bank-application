@@ -5,8 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6d25695e-333c-4fd6-ba56-07af27a9c4e6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/tests_for_app/customer_service_tests/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests_for_app/customer_service_tests/test_player_services.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests_for_app/customer_service_tests/test_player_services.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests_for_app/customer_service_tests/test_player_services.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
