@@ -3,7 +3,7 @@ from abc import ABC, abstractmethod
 from entities.customers import Customer
 
 
-class CustomerDao(ABC):
+class CustomerService(ABC):
 
     @abstractmethod
     def create_customer_entry(self, customer: Customer) -> Customer:
