@@ -39,6 +39,6 @@ class CustomerServiceImp(CustomerService):
     def delete_account_by_id(self, customer_id: str, account_id: int) -> bool:
         pass
 
-    def delete_customer_by_id(self, customer_id: int) -> bool:
+    def delete_customer_by_id(self, customer_id: str) -> bool:
         pass
 
