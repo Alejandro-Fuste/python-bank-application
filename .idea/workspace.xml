@@ -5,10 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6d25695e-333c-4fd6-ba56-07af27a9c4e6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/service_layer/abstract_services/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service_layer/abstract_services/customer_service.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service_layer/implementation_services/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/customer_exceptions/invalid_transaction_exception.py" beforeDir="false" afterPath="$PROJECT_DIR$/customer_exceptions/invalid_transaction_exception.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service_layer/implementation_services/customer_service_imp.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer_exceptions/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/custom_exceptions/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer_exceptions/customer_not_found_exception.py" beforeDir="false" afterPath="$PROJECT_DIR$/custom_exceptions/customer_not_found_exception.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer_exceptions/duplicate_customer_exception.py" beforeDir="false" afterPath="$PROJECT_DIR$/custom_exceptions/duplicate_customer_exception.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer_exceptions/invalid_transaction_exception.py" beforeDir="false" afterPath="$PROJECT_DIR$/custom_exceptions/invalid_transaction_exception.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
