@@ -5,6 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6d25695e-333c-4fd6-ba56-07af27a9c4e6" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/service_layer/abstract_services/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service_layer/abstract_services/customer_service.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service_layer/implementation_services/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/customer_exceptions/invalid_transaction_exception.py" beforeDir="false" afterPath="$PROJECT_DIR$/customer_exceptions/invalid_transaction_exception.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
