@@ -77,7 +77,7 @@ class CustomerDaoImp(CustomerDao):
                 return True
 
 
-# new_cus = CustomerDaoImp()
+new_cus = CustomerDaoImp()
 
 # print(new_cus.withdraw_from_account_by_id('1', 1, 100))
 # print(new_cus.get_customer_balance_by_id("1", 1))
@@ -89,3 +89,9 @@ class CustomerDaoImp(CustomerDao):
 # updated_info = Customer("Luke", "Skywalker", "master jedi", "1", {1: {"type": "checking", "balance": 100},
 #                                                                   2: {"type": "saving", "balance": 1000}})
 # print(new_cus.update_customer_by_id('1', updated_info))
+print(new_cus.customer_list[0].customer_id)
+
+
+
+
+

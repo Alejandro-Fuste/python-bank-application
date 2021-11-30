@@ -6,7 +6,7 @@ customer = Customer("Rey", "NoLastName", "cat girl", "4",
                     {7: {"type": "checking", "balance": 100},
                      8: {"type": "saving", "balance": 1000}})
 updated_info = Customer("Luke", "Skywalker", "master jedi", "1", {1: {"type": "checking", "balance": 100},
-                                                                      2: {"type": "saving", "balance": 1000}})
+                                                                  2: {"type": "saving", "balance": 1000}})
 
 
 def test_create_customer_entry_success():

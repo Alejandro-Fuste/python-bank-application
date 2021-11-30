@@ -12,33 +12,61 @@ class CustomerServiceImp(CustomerService):
 
     def create_customer_entry(self, customer: Customer) -> Customer:
         for current_customer in self.customer_dao.customer_list:
-            if current_customer.customer_id == customer.customer_id or current_customer.user_name == customer.user_name:
-                raise DuplicateCustomerException("This account already exists")
+            if current_customer.user_name == customer.user_name:
+                raise DuplicateCustomerException("That account has already been created")
             else:
                 return self.customer_dao.create_customer_entry(customer)
 
     def get_customer_balance_by_id(self, customer_id: str, account_id: int) -> int:
-        pass
+        for current_customer in self.customer_dao.customer_list:
+            if current_customer.customer_id == customer_id:
+                if current_customer.accounts.get(account_id) is None:
+                    raise CustomerNotFoundException("This account was not found")
+        return self.customer_dao.get_customer_balance_by_id(customer_id, account_id)
 
     def deposit_into_account_by_id(self, customer_id: str, account_id: int, amount: int) -> int:
-        pass
+        for current_customer in self.customer_dao.customer_list:
+            if current_customer.customer_id == customer_id:
+                if amount < 0:
+                    raise InvalidTransactionException("This is not a valid transaction")
+        return self.customer_dao.deposit_into_account_by_id(customer_id, account_id, amount)
 
     def withdraw_from_account_by_id(self, customer_id: str, account_id: int, amount: int) -> int:
-        pass
+        for current_customer in self.customer_dao.customer_list:
+            if current_customer.customer_id == customer_id:
+                if amount > current_customer.accounts[account_id]["balance"]:
+                    raise InvalidTransactionException("This is not a valid transaction")
+        return self.customer_dao.withdraw_from_account_by_id(customer_id, account_id, amount)
 
     def transfer_money_by_their_ids(self, customer_id: str, from_account_id: int, to_account_id: int,
                                     amount: int) -> int:
-        pass
+        for current_customer in self.customer_dao.customer_list:
+            if current_customer.customer_id == customer_id:
+                if amount > current_customer.accounts[from_account_id]["balance"]:
+                    raise InvalidTransactionException("This is not a valid transaction")
+        return self.customer_dao.transfer_money_by_their_ids(customer_id, from_account_id, to_account_id, amount)
 
     def update_customer_by_id(self, customer_id: str, customer: Customer) -> Customer:
-        pass
+        for current_customer in self.customer_dao.customer_list:
+            if current_customer.customer_id == customer_id:
+                return self.customer_dao.update_customer_by_id(customer_id, customer)
+        raise CustomerNotFoundException("This account was not found")
 
     def get_customer_by_id(self, customer_id: str) -> Customer:
-        pass
+        for current_customer in self.customer_dao.customer_list:
+            if current_customer.customer_id == customer_id:
+                return self.customer_dao.update_customer_by_id(customer_id)
+        raise CustomerNotFoundException("This account was not found")
 
     def delete_account_by_id(self, customer_id: str, account_id: int) -> bool:
-        pass
+        for current_customer in self.customer_dao.customer_list:
+            if current_customer.customer_id == customer_id:
+                if current_customer.accounts.get(account_id) is None:
+                    raise CustomerNotFoundException("This account was not found")
+        return self.customer_dao.delete_account_by_id(customer_id, account_id)
 
     def delete_customer_by_id(self, customer_id: str) -> bool:
-        pass
-
+        for current_customer in self.customer_dao.customer_list:
+            if current_customer.customer_id == customer_id:
+                return self.customer_dao.delete_customer_by_id(customer_id)
+        raise CustomerNotFoundException("This account was not found")
