@@ -41,18 +41,4 @@ class CustomerDao(ABC):
     def delete_customer_by_id(self, customer_id: int) -> bool:
         pass
 
-    @abstractmethod
-    def create_account(self, customer_id: int, customer: Customer) -> Customer:
-        pass
 
-    @abstractmethod
-    def get_all_customers(self) -> List[Customer]:
-        pass
-
-    @abstractmethod
-    def get_all_accounts(self) -> List[Customer]:
-        pass
-
-    @abstractmethod
-    def get_all_customer_accounts_by_id(self, customer_id: int) -> List[Customer]:
-        pass
