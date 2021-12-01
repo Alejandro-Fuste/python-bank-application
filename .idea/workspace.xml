@@ -5,11 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6d25695e-333c-4fd6-ba56-07af27a9c4e6" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/entities/accounts.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_access_layer/implementation_classes/customer_dao_imp.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_access_layer/implementation_classes/customer_dao_imp.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service_layer/implementation_services/customer_service_imp.py" beforeDir="false" afterPath="$PROJECT_DIR$/service_layer/implementation_services/customer_service_imp.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests_for_app/customer_dao_tests/test_customer_dao.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests_for_app/customer_dao_tests/test_customer_dao.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests_for_app/customer_service_tests/test_player_services.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests_for_app/customer_service_tests/test_player_services.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_access_layer/abstract_classes/customer_dao.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_access_layer/abstract_classes/customer_dao.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,7 +100,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for test_customer_dao.test_create_customer_entry_success" type="tests" factoryName="Autodetect" nameIsGenerated="true">
+    <configuration name="Python tests for test_customer_dao" type="tests" factoryName="Autodetect" nameIsGenerated="true">
       <module name="python-bank-application" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
