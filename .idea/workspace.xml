@@ -6,10 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="6d25695e-333c-4fd6-ba56-07af27a9c4e6" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_access_layer/implementation_classes/account_dao_imp.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_access_layer/implementation_classes/account_dao_imp.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_access_layer/implementation_classes/customer_dao_imp.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_access_layer/implementation_classes/customer_dao_imp.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/entities/accounts.py" beforeDir="false" afterPath="$PROJECT_DIR$/entities/accounts.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests_for_app/customer_dao_tests/test_customer_dao.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests_for_app/customer_dao_tests/test_customer_dao.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service_layer/implementation_services/customer_service_imp.py" beforeDir="false" afterPath="$PROJECT_DIR$/service_layer/implementation_services/customer_service_imp.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests_for_app/customer_service_tests/test_player_services.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests_for_app/customer_service_tests/test_customer_services.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -130,7 +128,7 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for test_player_services.test_validate_delete_account_method" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests for tests_for_app.customer_service_tests.test_customer_services.test_validate_delete_account_method" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="python-bank-application" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -140,11 +138,11 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_player_services.test_validate_delete_account_method&quot;" />
+      <option name="_new_target" value="&quot;tests_for_app.customer_service_tests.test_customer_services.test_validate_delete_account_method&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for test_player_services.test_validate_delete_customer_method" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests for tests_for_app.customer_service_tests.test_customer_services.test_validate_delete_customer_method" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="python-bank-application" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -154,11 +152,11 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_player_services.test_validate_delete_customer_method&quot;" />
+      <option name="_new_target" value="&quot;tests_for_app.customer_service_tests.test_customer_services.test_validate_delete_customer_method&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for test_player_services.test_validate_update_customer_method" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests for tests_for_app.customer_service_tests.test_customer_services.test_validate_update_customer_method" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="python-bank-application" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -168,16 +166,16 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_player_services.test_validate_update_customer_method&quot;" />
+      <option name="_new_target" value="&quot;tests_for_app.customer_service_tests.test_customer_services.test_validate_update_customer_method&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Python tests.Python tests for test_customer_dao.test_create_customer_entry_success" />
-        <item itemvalue="Python tests.Python tests for test_player_services.test_validate_delete_customer_method" />
-        <item itemvalue="Python tests.Python tests for test_player_services.test_validate_delete_account_method" />
-        <item itemvalue="Python tests.Python tests for test_player_services.test_validate_update_customer_method" />
+        <item itemvalue="Python tests.Python tests for tests_for_app.customer_service_tests.test_customer_services.test_validate_delete_customer_method" />
+        <item itemvalue="Python tests.Python tests for tests_for_app.customer_service_tests.test_customer_services.test_validate_delete_account_method" />
+        <item itemvalue="Python tests.Python tests for tests_for_app.customer_service_tests.test_customer_services.test_validate_update_customer_method" />
         <item itemvalue="Python.customer_dao_imp" />
       </list>
     </recent_temporary>

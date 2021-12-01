@@ -56,7 +56,7 @@ class CustomerServiceImp(CustomerService):
         for current_customer in self.customer_dao.customer_list:
             if current_customer.customer_id == customer_id:
                 return self.customer_dao.update_customer_by_id(customer_id)
-        raise CustomerNotFoundException("This account was not found")
+        raise CustomerNotFoundException("This customer was not found")
 
     def delete_account_by_id(self, customer_id: str, account_id: int) -> bool:
         for current_customer in self.customer_dao.customer_list:
