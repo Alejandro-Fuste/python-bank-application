@@ -1,6 +1,5 @@
 from data_access_layer.abstract_classes.customer_dao import CustomerDao
 from entities.customers import Customer
-import uuid0
 
 
 class CustomerDaoImp(CustomerDao):
@@ -16,11 +15,12 @@ class CustomerDaoImp(CustomerDao):
     customer_list = [customer_one, customer_two, customer_to_delete]
 
     # id generator
-    customer_id_generator = str(uuid0.generate())
+    customer_id_generator = 4
 
     # methods that perform bank actions
     def create_customer_entry(self, customer: Customer) -> Customer:
         customer.customer_id = CustomerDaoImp.customer_id_generator
+        CustomerDaoImp.customer_id_generator += 1
         CustomerDaoImp.customer_list.append(customer)
         return customer
 
@@ -90,8 +90,3 @@ new_cus = CustomerDaoImp()
 #                                                                   2: {"type": "saving", "balance": 1000}})
 # print(new_cus.update_customer_by_id('1', updated_info))
 print(new_cus.customer_list[0].customer_id)
-
-
-
-
-

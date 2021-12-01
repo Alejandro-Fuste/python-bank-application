@@ -2,7 +2,7 @@ from data_access_layer.implementation_classes.customer_dao_imp import CustomerDa
 from entities.customers import Customer
 
 customer_dao_imp = CustomerDaoImp()
-customer = Customer("Rey", "NoLastName", "cat girl", "4",
+customer = Customer("Rey", "NoLastName", "cat girl", "0",
                     {7: {"type": "checking", "balance": 100},
                      8: {"type": "saving", "balance": 1000}})
 updated_info = Customer("Luke", "Skywalker", "master jedi", "1", {1: {"type": "checking", "balance": 100},
@@ -11,7 +11,7 @@ updated_info = Customer("Luke", "Skywalker", "master jedi", "1", {1: {"type": "c
 
 def test_create_customer_entry_success():
     new_customer: Customer = customer_dao_imp.create_customer_entry(customer)
-    assert len(new_customer.customer_id) != 0
+    assert new_customer.customer_id != "0"
 
 
 def test_get_customer_balance_by_id_success():

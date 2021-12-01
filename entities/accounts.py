@@ -18,4 +18,3 @@ class Account:
             .format(self.customer_id, self.account_id, self.account_type, self.amount)
 
 
-
