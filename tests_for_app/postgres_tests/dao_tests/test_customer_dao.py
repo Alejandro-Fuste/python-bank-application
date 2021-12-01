@@ -1,3 +1,4 @@
 from data_access_layer.implementation_classes.customer_postgres_dao_imp import CustomerPostgresDAO
 from entities.customers import Customer
 
+customer_dao = CustomerPostgresDAO
