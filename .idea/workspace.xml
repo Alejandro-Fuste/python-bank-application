@@ -6,8 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="6d25695e-333c-4fd6-ba56-07af27a9c4e6" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service_layer/implementation_services/customer_service_imp.py" beforeDir="false" afterPath="$PROJECT_DIR$/service_layer/implementation_services/customer_service_imp.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests_for_app/customer_service_tests/test_player_services.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests_for_app/customer_service_tests/test_customer_services.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,6 +29,9 @@
       <filtered-out-file-type name="TAG" />
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="21HpCEudHCQ2ZtDVmx4IUarbjMH" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -201,7 +202,6 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
