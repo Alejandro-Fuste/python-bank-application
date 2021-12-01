@@ -1,5 +1,4 @@
 from abc import ABC, abstractmethod
-from typing import List
 from entities.customers import Customer
 
 
@@ -22,7 +21,8 @@ class CustomerDao(ABC):
         pass
 
     @abstractmethod
-    def transfer_money_by_their_ids(self, customer_id: str, from_account_id: int, to_account_id: int, amount: int) -> int:
+    def transfer_money_by_their_ids(self, customer_id: str, from_account_id: int, to_account_id: int, amount: int) -> \
+            int:
         pass
 
     @abstractmethod
@@ -40,5 +40,3 @@ class CustomerDao(ABC):
     @abstractmethod
     def delete_customer_by_id(self, customer_id: int) -> bool:
         pass
-
-
