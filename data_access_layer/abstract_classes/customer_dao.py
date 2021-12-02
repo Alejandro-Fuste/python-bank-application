@@ -9,20 +9,20 @@ class CustomerDao(ABC):
         pass
 
     @abstractmethod
-    def get_customer_balance_by_id(self, customer_id: str, account_id: int) -> int:
+    def get_customer_balance_by_id(self, customer_id: str, account_id: int) -> float:
         pass
 
     @abstractmethod
-    def deposit_into_account_by_id(self, customer_id: str, account_id: int, amount: int) -> int:
+    def deposit_into_account_by_id(self, customer_id: str, account_id: int, amount: int) -> float:
         pass
 
     @abstractmethod
-    def withdraw_from_account_by_id(self, customer_id: str, account_id: int, amount: int) -> int:
+    def withdraw_from_account_by_id(self, customer_id: str, account_id: int, amount: int) -> float:
         pass
 
     @abstractmethod
     def transfer_money_by_their_ids(self, customer_id: str, from_account_id: int, to_account_id: int, amount: int) -> \
-            int:
+            float:
         pass
 
     @abstractmethod

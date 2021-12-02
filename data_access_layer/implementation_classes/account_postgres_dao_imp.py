@@ -7,7 +7,7 @@ from util.database_connection import connection
 
 class AccountPostgresDAO(AccountDao):
 
-    def create_account(self, customer_id: int, account: Account) -> Account:
+    def create_account(self, account: Account) -> Account:
         pass
 
     def get_all_customers(self) -> List[Account]:

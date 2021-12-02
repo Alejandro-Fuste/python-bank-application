@@ -10,23 +10,23 @@ class CustomerPostgresDAO(CustomerDao):
     def get_customer_balance_by_id(self, customer_id: int, account_id: int) -> float:
         pass
 
-    def deposit_into_account_by_id(self, customer_id: str, account_id: int, amount: int) -> int:
+    def deposit_into_account_by_id(self, customer_id: int, account_id: int, amount: int) -> float:
         pass
 
-    def withdraw_from_account_by_id(self, customer_id: str, account_id: int, amount: int) -> int:
+    def withdraw_from_account_by_id(self, customer_id: int, account_id: int, amount: int) -> float:
         pass
 
-    def transfer_money_by_their_ids(self, customer_id: str, from_account_id: int, to_account_id: int, amount: int) -> \
-            int:
+    def transfer_money_by_their_ids(self, customer_id: int, from_account_id: int, to_account_id: int, amount: int) -> \
+            float:
         pass
 
-    def update_customer_by_id(self, customer_id: str, customer: Customer) -> Customer:
+    def update_customer_by_id(self, customer_id: int, customer: Customer) -> Customer:
         pass
 
-    def get_customer_by_id(self, customer_id: str) -> Customer:
+    def get_customer_by_id(self, customer_id: int) -> Customer:
         pass
 
-    def delete_account_by_id(self, customer_id: str, account_id: int) -> bool:
+    def delete_account_by_id(self, customer_id: int, account_id: int) -> bool:
         pass
 
     def delete_customer_by_id(self, customer_id: int) -> bool:

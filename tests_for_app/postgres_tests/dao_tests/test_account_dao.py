@@ -1,7 +1,7 @@
 from data_access_layer.implementation_classes.account_postgres_dao_imp import AccountPostgresDAO
 from entities.accounts import Account
 
-account_dao = AccountPostgresDAO
+account_dao = AccountPostgresDAO()
 new_account = Account(0, 'checking', 100.00, 1)
 
 

@@ -1,7 +1,7 @@
 from data_access_layer.implementation_classes.customer_postgres_dao_imp import CustomerPostgresDAO
 from entities.customers import Customer
 
-customer_dao = CustomerPostgresDAO
+customer_dao = CustomerPostgresDAO()
 customer: Customer = Customer(0, "Rey", "Skywalker", "ninja_cat_girl")
 
 update_customer = Customer(0, "Luke", "Skywalker", "master jedi")
@@ -20,8 +20,9 @@ def test_get_customer_balance_by_id_success():
 
 
 def test_deposit_into_account_by_id_success():
-    customer_balance = customer_dao.get_customer_balance_by_id()
-    assert
+    original_balance = customer_dao.get_customer_balance_by_id(1, 1)
+    new_balance = customer_dao.deposit_into_account_by_id(1, 1, 100)
+    assert new_balance > original_balance
 
 
 def test_withdraw_from_account_by_id_success():

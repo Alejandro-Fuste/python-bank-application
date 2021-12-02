@@ -6,7 +6,7 @@ from entities.accounts import Account
 class AccountDao(ABC):
 
     @abstractmethod
-    def create_account(self, customer_id: int, account: Account) -> Account:
+    def create_account(self, account: Account) -> Account:
         pass
 
     @abstractmethod
