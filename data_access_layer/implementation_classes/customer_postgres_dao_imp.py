@@ -14,10 +14,19 @@ class CustomerPostgresDAO(CustomerDao):
         return customer
 
     def get_customer_balance_by_id(self, customer_id: int, account_id: int) -> float:
-        pass
+        sql = 'select amount from account where account_id = %s and customer_id = %s'
+        cursor = connection.cursor()
+        cursor.execute(sql, (account_id, customer_id))
+        customer_record = cursor.fetchone()
+        return customer_record
 
     def deposit_into_account_by_id(self, customer_id: int, account_id: int, amount: int) -> float:
-        pass
+        new_balance = self.get_customer_balance_by_id(customer_id, account_id) + amount
+        sql = 'update account set amount = %s where account_id = %s and customer_id = %s'
+        cursor = connection.cursor()
+        cursor.execute(sql, (new_balance, account_id, customer_id))
+        customer_record = cursor.fetchone()
+        return customer_record
 
     def withdraw_from_account_by_id(self, customer_id: int, account_id: int, amount: int) -> float:
         pass
