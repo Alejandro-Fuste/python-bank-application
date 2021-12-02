@@ -6,8 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="6d25695e-333c-4fd6-ba56-07af27a9c4e6" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service_layer/implementation_services/account_postgres_service_imp.py" beforeDir="false" afterPath="$PROJECT_DIR$/service_layer/implementation_services/account_postgres_service_imp.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests_for_app/postgres_tests/service_tests/test_account_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests_for_app/postgres_tests/service_tests/test_account_service.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_access_layer/implementation_classes/customer_postgres_dao_imp.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_access_layer/implementation_classes/customer_postgres_dao_imp.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
