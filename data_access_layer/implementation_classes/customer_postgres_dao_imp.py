@@ -25,15 +25,27 @@ class CustomerPostgresDAO(CustomerDao):
         sql = 'update account set amount = %s where account_id = %s and customer_id = %s'
         cursor = connection.cursor()
         cursor.execute(sql, (new_balance, account_id, customer_id))
-        customer_record = cursor.fetchone()
-        return customer_record
+        connection.commit()
+        return new_balance
 
     def withdraw_from_account_by_id(self, customer_id: int, account_id: int, amount: int) -> float:
-        pass
+        new_balance = self.get_customer_balance_by_id(customer_id, account_id) - amount
+        sql = 'update account set amount = %s where account_id = %s and customer_id = %s'
+        cursor = connection.cursor()
+        cursor.execute(sql, (new_balance, account_id, customer_id))
+        connection.commit()
+        return new_balance
 
     def transfer_money_by_their_ids(self, customer_id: int, from_account_id: int, to_account_id: int, amount: int) -> \
             float:
-        pass
+        self.withdraw_from_account_by_id(customer_id, from_account_id, amount)
+        self.deposit_into_account_by_id(customer_id, to_account_id, amount)
+        new_balance = self.get_customer_balance_by_id(customer_id, to_account_id)
+        sql = 'update account set amount = %s where account_id = %s and customer_id = %s'
+        cursor = connection.cursor()
+        cursor.execute(sql, (new_balance, to_account_id, customer_id))
+        connection.commit()
+        return new_balance
 
     def update_customer_by_id(self, customer_id: int, customer: Customer) -> Customer:
         sql = 'update customer set first_name = %s, last_name = %s, user_name = %s where customer_id = %s'
