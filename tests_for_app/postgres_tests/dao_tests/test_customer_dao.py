@@ -48,8 +48,10 @@ def test_get_customer_by_id_success():
 
 
 def test_delete_account_by_id_success():
-    pass
+    selected_account = customer_dao.delete_account_by_id(3, 6)
+    assert selected_account
 
 
 def test_delete_customer_by_id_success():
-   pass
+    selected_customer = customer_dao.delete_customer_by_id(3)
+    assert selected_customer
