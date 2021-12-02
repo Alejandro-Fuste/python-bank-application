@@ -42,7 +42,15 @@ class CustomerPostgresDAO(CustomerDao):
         return customer
 
     def delete_account_by_id(self, customer_id: int, account_id: int) -> bool:
-        pass
+        sql = 'delete from account where account_id = %s and customer_id = %s'
+        cursor = connection.cursor()
+        cursor.execute(sql, (account_id, customer_id))
+        connection.commit()
+        return True
 
     def delete_customer_by_id(self, customer_id: int) -> bool:
-        pass
+        sql = 'delete from customer where customer_id = %s'
+        cursor = connection.cursor()
+        cursor.execute(sql, [customer_id])
+        connection.commit()
+        return True
