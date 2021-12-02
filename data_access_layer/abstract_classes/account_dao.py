@@ -1,6 +1,7 @@
 from abc import ABC, abstractmethod
 from typing import List
 from entities.accounts import Account
+from entities.customers import Customer
 
 
 class AccountDao(ABC):
@@ -10,7 +11,7 @@ class AccountDao(ABC):
         pass
 
     @abstractmethod
-    def get_all_customers(self) -> List[Account]:
+    def get_all_customers(self) -> List[Customer]:
         pass
 
     @abstractmethod
@@ -18,5 +19,5 @@ class AccountDao(ABC):
         pass
 
     @abstractmethod
-    def get_all_customer_accounts_by_id(self, customer_id: int) -> List[Account]:
+    def get_all_customer_accounts_by_id(self, customer_id: int) -> Account:
         pass
