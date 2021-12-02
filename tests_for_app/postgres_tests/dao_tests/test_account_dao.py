@@ -11,7 +11,8 @@ def test_create_account():
 
 
 def test_get_all_customers():
-    pass
+    accounts = account_dao.get_all_accounts()
+    assert len(accounts) > 6
 
 
 def test_get_all_accounts():
