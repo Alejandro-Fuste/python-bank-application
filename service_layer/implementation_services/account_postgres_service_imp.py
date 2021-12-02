@@ -9,6 +9,9 @@ from service_layer.abstract_services.account_service import AccountService
 
 
 class AccountPostgresServiceImp(AccountService):
+    def __int__(self, account_dao: AccountPostgresDAO):
+        self.account_dao = account_dao
+
     def create_account(self, account: Account) -> Account:
         pass
 
