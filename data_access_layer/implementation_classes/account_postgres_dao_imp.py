@@ -18,7 +18,8 @@ class AccountPostgresDAO(AccountDao):
         return account
 
     def get_all_customers(self) -> List[Customer]:
-        sql = 'select * from customer order by customer_id'
+        sql = 'select * from customer inner join account on account.customer_id = customer.customer_id ' \
+              'order by account.account_id '
         cursor = connection.cursor()
         cursor.execute(sql)
         customer_records = cursor.fetchall()
@@ -28,7 +29,8 @@ class AccountPostgresDAO(AccountDao):
         return customers
 
     def get_all_accounts(self) -> List[Account]:
-        sql = 'select * from account order by account_id'
+        sql = 'select * from account inner join customer on customer.customer_id = account.customer_id ' \
+              'order by account.account_id'
         cursor = connection.cursor()
         cursor.execute(sql)
         account_records = cursor.fetchall()
@@ -38,7 +40,8 @@ class AccountPostgresDAO(AccountDao):
         return accounts
 
     def get_all_customer_accounts_by_id(self, customer_id: int) -> Customer:
-        sql = 'select * from account where customer_id = 1 order by account_id'
+        sql = 'select * from account inner join customer on customer.customer_id = account.customer_id ' \
+              'where account.customer_id = 1 order by account.account_id'
         cursor = connection.cursor()
         cursor.execute(sql)
         customer_record = cursor.fetchone()
