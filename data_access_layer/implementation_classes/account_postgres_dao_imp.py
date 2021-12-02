@@ -17,8 +17,8 @@ class AccountPostgresDAO(AccountDao):
         account.account_id = generated_id
         return account
 
-    def get_all_customers(self) -> List[Account]:
-        sql = ''
+    def get_all_customers(self) -> List[Customer]:
+        sql = 'select * from customer order by customer_id'
         cursor = connection.cursor()
         cursor.execute(sql)
         customer_records = cursor.fetchall()
@@ -37,7 +37,7 @@ class AccountPostgresDAO(AccountDao):
             accounts.append(Account(*account))
         return accounts
 
-    def get_all_customer_accounts_by_id(self, customer_id: int) -> List[Account]:
+    def get_all_customer_accounts_by_id(self, customer_id: int) -> Customer:
         sql = ''
         cursor = connection.cursor()
         cursor.execute(sql)
