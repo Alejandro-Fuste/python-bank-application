@@ -26,30 +26,26 @@ def test_deposit_into_account_by_id_success():
 
 
 def test_withdraw_from_account_by_id_success():
-    customer_balance = customer_dao.get_customer_balance_by_id()
-    assert
+    original_balance = customer_dao.get_customer_balance_by_id(1, 1)
+    new_balance = customer_dao.withdraw_from_account_by_id(1, 1, 50)
+    assert new_balance < original_balance
 
 
 def test_transfer_money_by_their_ids_success():
-    customer_balance = customer_dao.get_customer_balance_by_id()
-    assert
+    pass
 
 
 def test_update_customer_by_id_success():
-    customer_balance = customer_dao.get_customer_balance_by_id()
-    assert
+    pass
 
 
 def test_get_customer_by_id_success():
-    customer_balance = customer_dao.get_customer_balance_by_id()
-    assert
+    pass
 
 
 def test_delete_account_by_id_success():
-    customer_balance = customer_dao.get_customer_balance_by_id()
-    assert
+    pass
 
 
 def test_delete_customer_by_id_success():
-    customer_balance = customer_dao.get_customer_balance_by_id()
-    assert
+   pass
