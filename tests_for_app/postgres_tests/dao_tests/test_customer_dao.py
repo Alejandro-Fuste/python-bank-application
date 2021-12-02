@@ -10,7 +10,8 @@ delete_customer = Customer(0, "Anakin", "Skywalker", "Cancel Me")
 
 
 def test_create_customer_entry():
-    pass
+    created_customer = customer_dao.create_customer_entry(customer)
+    assert created_customer.customer_id != 0
 
 
 def test_get_customer_balance_by_id():
