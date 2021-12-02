@@ -3,7 +3,7 @@ from typing import List
 from entities.accounts import Account
 
 
-class AccountDao(ABC):
+class AccountService(ABC):
 
     @abstractmethod
     def create_account(self, account: Account) -> Account:

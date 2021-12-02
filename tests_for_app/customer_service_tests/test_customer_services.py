@@ -82,7 +82,7 @@ def test_validate_delete_account_method():
 
 def test_validate_delete_customer_method():
     try:
-        customer_service.delete_customer_by_id('10py;yt')
+        customer_service.delete_customer_by_id('10')
         assert False
     except CustomerNotFoundException as e:
         assert str(e) == "This account was not found"
