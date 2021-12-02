@@ -7,7 +7,7 @@ class CustomerPostgresDAO(CustomerDao):
     def create_customer_entry(self, customer: Customer) -> Customer:
         pass
 
-    def get_customer_balance_by_id(self, customer_id: str, account_id: int) -> int:
+    def get_customer_balance_by_id(self, customer_id: int, account_id: int) -> float:
         pass
 
     def deposit_into_account_by_id(self, customer_id: str, account_id: int, amount: int) -> int:
