@@ -14,6 +14,16 @@ def test_create_customer_entry_success():
     assert created_customer.customer_id != 0
 
 
+def test_get_customer_by_id_success():
+    selected_customer = customer_dao.get_customer_by_id(1)
+    assert selected_customer.customer_id == 1
+
+
+def test_get_all_customers():
+    customers = customer_dao.get_all_customers()
+    assert len(customers) >= 3
+
+
 def test_get_customer_balance_by_id_success():
     customer_balance = customer_dao.get_customer_balance_by_id(1, 1)
     assert customer_balance != 0
@@ -40,16 +50,6 @@ def test_transfer_money_by_their_ids_success():
 def test_update_customer_by_id_success():
     customer_update: Customer = customer_dao.update_customer_by_id(1, update_customer)
     assert customer_update.user_name == update_customer.user_name
-
-
-def test_get_customer_by_id_success():
-    selected_customer = customer_dao.get_customer_by_id(1)
-    assert selected_customer.customer_id == 1
-
-
-def test_delete_account_by_id_success():
-    selected_account = customer_dao.delete_account_by_id(3, 6)
-    assert selected_account
 
 
 def test_delete_customer_by_id_success():

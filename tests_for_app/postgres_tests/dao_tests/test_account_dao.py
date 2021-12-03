@@ -10,16 +10,16 @@ def test_create_account():
     assert account_result.account_id != 0
 
 
-def test_get_all_customers():
-    customers = account_dao.get_all_customers()
-    assert len(customers) >= 3
-
-
 def test_get_all_accounts():
     accounts = account_dao.get_all_accounts()
     assert len(accounts) >= 6
 
 
 def test_get_all_customer_accounts_by_id():
-    customer_accounts = account_dao.get_all_customer_accounts_by_id()
-    assert len(customer_accounts) >= 6
+    customer_accounts = account_dao.get_all_customer_accounts_by_id(1)
+    assert len(customer_accounts) >= 2
+
+
+def test_delete_account_by_id_success():
+    selected_account = account_dao.delete_account_by_id(3, 6)
+    assert selected_account

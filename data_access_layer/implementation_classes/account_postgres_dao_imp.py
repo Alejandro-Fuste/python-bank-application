@@ -2,7 +2,6 @@ from typing import List
 
 from data_access_layer.abstract_classes.account_dao import AccountDao
 from entities.accounts import Account
-from entities.customers import Customer
 from util.database_connection import connection
 
 
@@ -28,14 +27,16 @@ class AccountPostgresDAO(AccountDao):
             accounts.append(Account(*account))
         return accounts
 
-    def get_all_customer_accounts_by_id(self, customer_id: int) -> Customer:
+    def get_all_customer_accounts_by_id(self, customer_id: int) -> List[Account]:
         sql = 'select * from account inner join customer on customer.customer_id = account.customer_id ' \
               'where account.customer_id = 1 order by account.account_id'
         cursor = connection.cursor()
         cursor.execute(sql)
-        customer_record = cursor.fetchone()
-        customer = Customer(*customer_record)
-        return customer
+        account_records = cursor.fetchall()
+        accounts = []
+        for account in account_records:
+            accounts.append(Account(*account))
+        return accounts
 
     def delete_account_by_id(self, customer_id: int, account_id: int) -> bool:
         sql = 'delete from account where account_id = %s and customer_id = %s'
