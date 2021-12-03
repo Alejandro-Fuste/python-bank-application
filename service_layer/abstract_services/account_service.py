@@ -10,13 +10,13 @@ class AccountService(ABC):
         pass
 
     @abstractmethod
-    def get_all_customers(self) -> List[Account]:
-        pass
-
-    @abstractmethod
     def get_all_accounts(self) -> List[Account]:
         pass
 
     @abstractmethod
     def get_all_customer_accounts_by_id(self, customer_id: int) -> List[Account]:
+        pass
+
+    @abstractmethod
+    def delete_account_by_id(self, customer_id: str, account_id: int) -> bool:
         pass

@@ -14,6 +14,25 @@ class CustomerPostgresDAO(CustomerDao):
         customer.customer_id = customer_id
         return customer
 
+    def get_customer_by_id(self, customer_id: int) -> Customer:
+        sql = 'select * from customer where customer_id = %s'
+        cursor = connection.cursor()
+        cursor.execute(sql)
+        customer_record = cursor.fetchone()
+        customer = Customer(*customer_record)
+        return customer
+
+    def get_all_customers(self) -> List[Customer]:
+        sql = 'select * from customer inner join account on account.customer_id = customer.customer_id ' \
+              'order by account.account_id '
+        cursor = connection.cursor()
+        cursor.execute(sql)
+        customer_records = cursor.fetchall()
+        customers = []
+        for customer in customer_records:
+            customers.append(Customer(*customer))
+        return customers
+
     def get_customer_balance_by_id(self, customer_id: int, account_id: int) -> float:
         sql = 'select amount from account where account_id = %s and customer_id = %s'
         cursor = connection.cursor()
@@ -54,25 +73,6 @@ class CustomerPostgresDAO(CustomerDao):
         cursor.execute(sql, (customer.first_name, customer.last_name, customer.user_name, customer.customer_id))
         connection.commit()
         return customer
-
-    def get_customer_by_id(self, customer_id: int) -> Customer:
-        sql = 'select * from customer where customer_id = %s'
-        cursor = connection.cursor()
-        cursor.execute(sql)
-        customer_record = cursor.fetchone()
-        customer = Customer(*customer_record)
-        return customer
-
-    def get_all_customers(self) -> List[Customer]:
-        sql = 'select * from customer inner join account on account.customer_id = customer.customer_id ' \
-              'order by account.account_id '
-        cursor = connection.cursor()
-        cursor.execute(sql)
-        customer_records = cursor.fetchall()
-        customers = []
-        for customer in customer_records:
-            customers.append(Customer(*customer))
-        return customers
 
     def delete_customer_by_id(self, customer_id: int) -> bool:
         sql = 'delete from customer where customer_id = %s'
