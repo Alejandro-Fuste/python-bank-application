@@ -17,17 +17,6 @@ class AccountPostgresDAO(AccountDao):
         account.account_id = generated_id
         return account
 
-    def get_all_customers(self) -> List[Customer]:
-        sql = 'select * from customer inner join account on account.customer_id = customer.customer_id ' \
-              'order by account.account_id '
-        cursor = connection.cursor()
-        cursor.execute(sql)
-        customer_records = cursor.fetchall()
-        customers = []
-        for customer in customer_records:
-            customers.append(Customer(*customer))
-        return customers
-
     def get_all_accounts(self) -> List[Account]:
         sql = 'select * from account inner join customer on customer.customer_id = account.customer_id ' \
               'order by account.account_id'
@@ -47,3 +36,10 @@ class AccountPostgresDAO(AccountDao):
         customer_record = cursor.fetchone()
         customer = Customer(*customer_record)
         return customer
+
+    def delete_account_by_id(self, customer_id: int, account_id: int) -> bool:
+        sql = 'delete from account where account_id = %s and customer_id = %s'
+        cursor = connection.cursor()
+        cursor.execute(sql, (account_id, customer_id))
+        connection.commit()
+        return True

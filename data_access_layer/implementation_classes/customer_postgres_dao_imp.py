@@ -1,6 +1,7 @@
 from data_access_layer.abstract_classes.customer_dao import CustomerDao
 from util.database_connection import connection
 from entities.customers import Customer
+from typing import List
 
 
 class CustomerPostgresDAO(CustomerDao):
@@ -62,12 +63,16 @@ class CustomerPostgresDAO(CustomerDao):
         customer = Customer(*customer_record)
         return customer
 
-    def delete_account_by_id(self, customer_id: int, account_id: int) -> bool:
-        sql = 'delete from account where account_id = %s and customer_id = %s'
+    def get_all_customers(self) -> List[Customer]:
+        sql = 'select * from customer inner join account on account.customer_id = customer.customer_id ' \
+              'order by account.account_id '
         cursor = connection.cursor()
-        cursor.execute(sql, (account_id, customer_id))
-        connection.commit()
-        return True
+        cursor.execute(sql)
+        customer_records = cursor.fetchall()
+        customers = []
+        for customer in customer_records:
+            customers.append(Customer(*customer))
+        return customers
 
     def delete_customer_by_id(self, customer_id: int) -> bool:
         sql = 'delete from customer where customer_id = %s'
