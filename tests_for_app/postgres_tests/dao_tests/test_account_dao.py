@@ -12,7 +12,7 @@ def test_create_account():
 
 def test_get_all_accounts():
     accounts = account_dao.get_all_accounts()
-    assert len(accounts) >= 6
+    assert len(accounts) >= 5
 
 
 def test_get_all_customer_accounts_by_id():

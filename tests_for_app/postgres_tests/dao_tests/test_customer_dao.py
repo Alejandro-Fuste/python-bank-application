@@ -31,19 +31,19 @@ def test_get_customer_balance_by_id_success():
 
 def test_deposit_into_account_by_id_success():
     original_balance = customer_dao.get_customer_balance_by_id(1, 1)
-    new_balance = customer_dao.deposit_into_account_by_id(1, 1, 100)
+    new_balance = customer_dao.deposit_into_account_by_id(1, 1, 100.00)
     assert new_balance > original_balance
 
 
 def test_withdraw_from_account_by_id_success():
     original_balance = customer_dao.get_customer_balance_by_id(1, 1)
-    new_balance = customer_dao.withdraw_from_account_by_id(1, 1, 50)
+    new_balance = customer_dao.withdraw_from_account_by_id(1, 1, 50.00)
     assert new_balance < original_balance
 
 
 def test_transfer_money_by_their_ids_success():
     to_account_original_balance = customer_dao.get_customer_balance_by_id(1, 1)
-    to_account_new_balance = customer_dao.transfer_money_by_their_ids(1, 2, 1, 100)
+    to_account_new_balance = customer_dao.transfer_money_by_their_ids(1, 2, 1, 100.00)
     assert to_account_new_balance > to_account_original_balance
 
 
