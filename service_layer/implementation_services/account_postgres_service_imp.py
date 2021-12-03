@@ -11,14 +11,14 @@ class AccountPostgresServiceImp(AccountService):
     def __int__(self, account_dao: AccountPostgresDAO):
         self.account_dao = account_dao
 
-    def create_account(self, account: Account) -> Account:
+    def service_create_account(self, account: Account) -> Account:
         pass
 
-    def get_all_accounts(self) -> List[Account]:
+    def service_get_all_accounts(self) -> List[Account]:
         pass
 
-    def get_all_customer_accounts_by_id(self, customer_id: int) -> List[Account]:
+    def service_get_all_customer_accounts_by_id(self, customer_id: int) -> List[Account]:
         pass
 
-    def delete_account_by_id(self, customer_id: int, account_id: int) -> bool:
+    def service_delete_account_by_id(self, customer_id: int, account_id: int) -> bool:
         pass
