@@ -23,8 +23,9 @@ class CustomerPostgresDAO(CustomerDao):
         return customer
 
     def get_all_customers(self) -> List[Customer]:
-        sql = 'select * from customer inner join account on account.customer_id = customer.customer_id ' \
-              'order by account.account_id '
+        sql = 'select customer.customer_id, customer.first_name, customer.last_name, customer.last_name, ' \
+              'account.account_id, account.account_type, account.amount from customer inner join account ' \
+              'on account.customer_id = customer.customer_id order by account.account_id'
         cursor = connection.cursor()
         cursor.execute(sql)
         customer_records = cursor.fetchall()
