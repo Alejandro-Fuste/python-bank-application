@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6d25695e-333c-4fd6-ba56-07af27a9c4e6" name="Changes" comment="" />
+    <list default="true" id="6d25695e-333c-4fd6-ba56-07af27a9c4e6" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/data_access_layer/abstract_classes/account_dao.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_access_layer/abstract_classes/account_dao.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_access_layer/abstract_classes/customer_dao.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_access_layer/abstract_classes/customer_dao.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service_layer/implementation_services/customer_postgres_service_imp.py" beforeDir="false" afterPath="$PROJECT_DIR$/service_layer/implementation_services/customer_postgres_service_imp.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

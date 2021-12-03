@@ -7,11 +7,14 @@ from service_layer.abstract_services.customer_service import CustomerService
 
 
 class CustomerPostgresServiceImp(CustomerService):
+    def __int__(self, customer_dao: CustomerPostgresDAO):
+        self.customer_dao = customer_dao
+
     def create_customer_entry(self, customer: Customer) -> Customer:
-        pass
+        # customers = self
 
     def get_customer_balance_by_id(self, customer_id: int, account_id: int) -> float:
-        pass
+        # customers = self.customer_dao.
 
     def deposit_into_account_by_id(self, customer_id: int, account_id: int, amount: int) -> float:
         pass
