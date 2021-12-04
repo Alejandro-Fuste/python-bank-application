@@ -18,7 +18,11 @@ class CustomerPostgresDAO(CustomerDao):
         sql = 'select * from "python-banking-app".customer where customer_id = %s'
         cursor = connection.cursor()
         cursor.execute(sql, [customer_id])
+<<<<<<< HEAD
         customer_record = cursor.fetchone()[0]
+=======
+        customer_record = cursor.fetchone()
+>>>>>>> 9e2631e8804e04f8d77047f4a4b0ad108b61bc58
         customer = Customer(*customer_record)
         return customer
 

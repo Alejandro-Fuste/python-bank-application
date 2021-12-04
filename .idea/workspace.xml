@@ -7,6 +7,7 @@
     <list default="true" id="6d25695e-333c-4fd6-ba56-07af27a9c4e6" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data_access_layer/abstract_classes/customer_dao.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_access_layer/abstract_classes/customer_dao.py" afterDir="false" />
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/data_access_layer/implementation_classes/account_postgres_dao_imp.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_access_layer/implementation_classes/account_postgres_dao_imp.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data_access_layer/implementation_classes/customer_postgres_dao_imp.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_access_layer/implementation_classes/customer_postgres_dao_imp.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/service_layer/implementation_services/account_postgres_service_imp.py" beforeDir="false" afterPath="$PROJECT_DIR$/service_layer/implementation_services/account_postgres_service_imp.py" afterDir="false" />
@@ -15,6 +16,16 @@
       <change beforePath="$PROJECT_DIR$/tests_for_app/postgres_tests/dao_tests/test_customer_dao.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests_for_app/postgres_tests/dao_tests/test_customer_dao.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests_for_app/postgres_tests/service_tests/test_account_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests_for_app/postgres_tests/service_tests/test_account_service.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests_for_app/postgres_tests/service_tests/test_customer_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests_for_app/postgres_tests/service_tests/test_customer_service.py" afterDir="false" />
+=======
+<<<<<<< HEAD
+      <change beforePath="$PROJECT_DIR$/data_access_layer/implementation_classes/account_postgres_dao_imp.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_access_layer/implementation_classes/account_postgres_dao_imp.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_access_layer/implementation_classes/customer_postgres_dao_imp.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_access_layer/implementation_classes/customer_postgres_dao_imp.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests_for_app/postgres_tests/dao_tests/test_account_dao.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests_for_app/postgres_tests/dao_tests/test_account_dao.py" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/data_access_layer/implementation_classes/customer_postgres_dao_imp.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_access_layer/implementation_classes/customer_postgres_dao_imp.py" afterDir="false" />
+>>>>>>> 0537813008f2170d4ef2f29db2be14e0e195e432
+      <change beforePath="$PROJECT_DIR$/tests_for_app/postgres_tests/dao_tests/test_customer_dao.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests_for_app/postgres_tests/dao_tests/test_customer_dao.py" afterDir="false" />
+>>>>>>> 9e2631e8804e04f8d77047f4a4b0ad108b61bc58
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,7 +73,15 @@
       <recent name="$PROJECT_DIR$/entitie" />
     </key>
   </component>
+<<<<<<< HEAD
   <component name="RunManager" selected="Python tests.Python tests for test_account_service.test_validate_delete_account_method">
+=======
+<<<<<<< HEAD
+  <component name="RunManager" selected="Python tests.Python tests for test_account_dao.test_delete_account_by_id_success">
+=======
+  <component name="RunManager" selected="Python tests.Python tests for test_customer_dao.test_transfer_money_by_their_ids_success">
+>>>>>>> 0537813008f2170d4ef2f29db2be14e0e195e432
+>>>>>>> 9e2631e8804e04f8d77047f4a4b0ad108b61bc58
     <configuration name="account_postgres_dao_imp" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="python-bank-application" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -248,6 +267,7 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
+<<<<<<< HEAD
     <configuration name="Python tests for test_account_service.test_duplicate_account_for_create_account" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="python-bank-application" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -336,6 +356,8 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
+=======
+>>>>>>> 9e2631e8804e04f8d77047f4a4b0ad108b61bc58
     <configuration name="Python tests for test_customer_dao" type="tests" factoryName="Autodetect" nameIsGenerated="true">
       <module name="python-bank-application" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -518,7 +540,33 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
+<<<<<<< HEAD
     <configuration name="Python tests for test_customer_dao.test_update_customer_by_id_success" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+=======
+    <configuration name="Python tests for test_customer_dao.test_create_customer_entry_success (1)" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="python-bank-application" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="HOST" value="database-1.clcj8berpakz.us-east-1.rds.amazonaws.com" />
+        <env name="DB" value="postgres" />
+        <env name="USER" value="root" />
+        <env name="PASSWORD" value="Awsrdsroot" />
+        <env name="PORT" value="5432" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests_for_app/postgres_tests/dao_tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_customer_dao.test_create_customer_entry_success&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for test_customer_dao.test_create_customer_entry_success" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+>>>>>>> 9e2631e8804e04f8d77047f4a4b0ad108b61bc58
       <module name="python-bank-application" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -760,6 +808,182 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
+    <configuration name="Python tests for test_customer_dao.test_delete_customer_by_id_success" type="tests" factoryName="Autodetect" nameIsGenerated="true">
+      <module name="python-bank-application" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="HOST" value="database-1.clcj8berpakz.us-east-1.rds.amazonaws.com" />
+        <env name="DB" value="postgres" />
+        <env name="USER" value="root" />
+        <env name="PASSWORD" value="Awsrdsroot" />
+        <env name="PORT" value="5432" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests_for_app/postgres_tests/dao_tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_customer_dao.test_delete_customer_by_id_success&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for test_customer_dao.test_deposit_into_account_by_id_success" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="python-bank-application" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="HOST" value="database-1.clcj8berpakz.us-east-1.rds.amazonaws.com" />
+        <env name="DB" value="postgres" />
+        <env name="USER" value="root" />
+        <env name="PASSWORD" value="Awsrdsroot" />
+        <env name="PORT" value="5432" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests_for_app/postgres_tests/dao_tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_customer_dao.test_deposit_into_account_by_id_success&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for test_customer_dao.test_get_all_customers" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="python-bank-application" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="HOST" value="database-1.clcj8berpakz.us-east-1.rds.amazonaws.com" />
+        <env name="DB" value="postgres" />
+        <env name="USER" value="root" />
+        <env name="PASSWORD" value="Awsrdsroot" />
+        <env name="PORT" value="5432" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests_for_app/postgres_tests/dao_tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_customer_dao.test_get_all_customers&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for test_customer_dao.test_get_customer_balance_by_id_success" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="python-bank-application" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="HOST" value="database-1.clcj8berpakz.us-east-1.rds.amazonaws.com" />
+        <env name="DB" value="postgres" />
+        <env name="USER" value="root" />
+        <env name="PASSWORD" value="Awsrdsroot" />
+        <env name="PORT" value="5432" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests_for_app/postgres_tests/dao_tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_customer_dao.test_get_customer_balance_by_id_success&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for test_customer_dao.test_get_customer_by_id_success" type="tests" factoryName="Autodetect" nameIsGenerated="true">
+      <module name="python-bank-application" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="HOST" value="database-1.clcj8berpakz.us-east-1.rds.amazonaws.com" />
+        <env name="DB" value="postgres" />
+        <env name="USER" value="root" />
+        <env name="PASSWORD" value="Awsrdsroot" />
+        <env name="PORT" value="5432" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests_for_app/postgres_tests/dao_tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_customer_dao.test_get_customer_by_id_success&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for test_customer_dao.test_transfer_money_by_their_ids_success" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="python-bank-application" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="HOST" value="database-1.clcj8berpakz.us-east-1.rds.amazonaws.com" />
+        <env name="DB" value="postgres" />
+        <env name="USER" value="root" />
+        <env name="PASSWORD" value="Awsrdsroot" />
+        <env name="PORT" value="5432" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests_for_app/postgres_tests/dao_tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_customer_dao.test_transfer_money_by_their_ids_success&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for test_customer_dao.test_update_customer_by_id_success" type="tests" factoryName="Autodetect" nameIsGenerated="true">
+      <module name="python-bank-application" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="HOST" value="database-1.clcj8berpakz.us-east-1.rds.amazonaws.com" />
+        <env name="DB" value="postgres" />
+        <env name="USER" value="root" />
+        <env name="PASSWORD" value="Awsrdsroot" />
+        <env name="PORT" value="5432" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests_for_app/postgres_tests/dao_tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_customer_dao.test_update_customer_by_id_success&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for test_customer_dao.test_withdraw_from_account_by_id_success" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="python-bank-application" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="HOST" value="database-1.clcj8berpakz.us-east-1.rds.amazonaws.com" />
+        <env name="DB" value="postgres" />
+        <env name="USER" value="root" />
+        <env name="PASSWORD" value="Awsrdsroot" />
+        <env name="PORT" value="5432" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests_for_app/postgres_tests/dao_tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_customer_dao.test_withdraw_from_account_by_id_success&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
     <configuration name="Python tests for tests_for_app.customer_service_tests.test_customer_services.test_validate_delete_account_method" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="python-bank-application" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -802,6 +1026,10 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 9e2631e8804e04f8d77047f4a4b0ad108b61bc58
     <configuration name="Python tests in test_account_dao.py" type="tests" factoryName="Autodetect" nameIsGenerated="true">
       <module name="python-bank-application" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -824,6 +1052,11 @@
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 0537813008f2170d4ef2f29db2be14e0e195e432
+>>>>>>> 9e2631e8804e04f8d77047f4a4b0ad108b61bc58
     <configuration name="Python tests in test_customer_dao.py" type="tests" factoryName="Autodetect" nameIsGenerated="true">
       <module name="python-bank-application" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -848,11 +1081,27 @@
     </configuration>
     <recent_temporary>
       <list>
+<<<<<<< HEAD
         <item itemvalue="Python tests.Python tests for test_account_service.test_validate_delete_account_method" />
         <item itemvalue="Python tests.Python tests for test_account_service.test_not_found_for_get_all_customer_accounts_by_id" />
         <item itemvalue="Python tests.Python tests for test_account_service.test_duplicate_account_for_create_account" />
         <item itemvalue="Python tests.Python tests for test_customer_service.test_validate_transfer_method" />
         <item itemvalue="Python tests.Python tests for test_customer_service.test_validate_withdraw_method" />
+=======
+<<<<<<< HEAD
+        <item itemvalue="Python tests.Python tests for test_account_dao.test_get_all_customer_accounts_by_id" />
+        <item itemvalue="Python tests.Python tests for test_account_dao.test_get_all_accounts" />
+        <item itemvalue="Python tests.Python tests for test_account_dao.test_create_account" />
+        <item itemvalue="Python tests.Python tests for test_customer_dao.test_transfer_money_by_their_ids_success" />
+        <item itemvalue="Python tests.Python tests for test_customer_dao.test_withdraw_from_account_by_id_success" />
+=======
+        <item itemvalue="Python tests.Python tests for test_customer_dao.test_transfer_money_by_their_ids_success" />
+        <item itemvalue="Python tests.Python tests for test_customer_dao.test_withdraw_from_account_by_id_success" />
+        <item itemvalue="Python tests.Python tests for test_customer_dao.test_deposit_into_account_by_id_success" />
+        <item itemvalue="Python tests.Python tests for test_customer_dao.test_get_customer_balance_by_id_success" />
+        <item itemvalue="Python tests.Python tests for test_customer_dao.test_get_all_customers" />
+>>>>>>> 0537813008f2170d4ef2f29db2be14e0e195e432
+>>>>>>> 9e2631e8804e04f8d77047f4a4b0ad108b61bc58
       </list>
     </recent_temporary>
   </component>
