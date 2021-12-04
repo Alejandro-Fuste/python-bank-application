@@ -28,14 +28,6 @@ def test_validate_get_customer_by_id_method():
         assert str(e) == "This customer was not found"
 
 
-def test_no_results_for_get_all_customers():
-    try:
-        customer_service.service_get_all_customers()
-        assert False
-    except CustomerNotFoundException as e:
-        assert str(e) == "These accounts were not found"
-
-
 def test_validate_get_balance_by_id_method():
     try:
         customer_service.service_get_customer_balance_by_id(1, 4)
@@ -54,7 +46,7 @@ def test_validate_deposit_method():
 
 def test_validate_withdraw_method():
     try:
-        customer_service.service_withdraw_from_account_by_id(1, 1, 2000)
+        customer_service.service_withdraw_from_account_by_id(1, 1, 2000.00)
         assert False
     except InvalidTransactionException as e:
         assert str(e) == "This is not a valid transaction"
@@ -70,7 +62,7 @@ def test_validate_transfer_method():
 
 def test_validate_update_customer_method():
     try:
-        customer_service.service_update_customer_by_id(10, customer_update)
+        customer_service.service_update_customer_by_id(100, customer_update)
         assert False
     except CustomerNotFoundException as e:
         assert str(e) == "This account was not found"

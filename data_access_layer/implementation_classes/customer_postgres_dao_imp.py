@@ -6,26 +6,24 @@ from typing import List
 
 class CustomerPostgresDAO(CustomerDao):
     def create_customer_entry(self, customer: Customer) -> Customer:
-        sql = "insert into customer values(default, %s, %s, %s) returning customer_id"
+        sql = 'insert into "python-banking-app".customer values(default, %s, %s, %s) returning customer_id'
         cursor = connection.cursor()
-        cursor.execute(sql, (customer.first_name, customer.last_name, customer.customer_id))
+        cursor.execute(sql, (customer.first_name, customer.last_name, customer.user_name))
         connection.commit()
         customer_id = cursor.fetchone()[0]
         customer.customer_id = customer_id
         return customer
 
     def get_customer_by_id(self, customer_id: int) -> Customer:
-        sql = 'select * from customer where customer_id = %s'
+        sql = 'select * from "python-banking-app".customer where customer_id = %s'
         cursor = connection.cursor()
-        cursor.execute(sql)
-        customer_record = cursor.fetchone()
+        cursor.execute(sql, [customer_id])
+        customer_record = cursor.fetchone()[0]
         customer = Customer(*customer_record)
         return customer
 
     def get_all_customers(self) -> List[Customer]:
-        sql = 'select customer.customer_id, customer.first_name, customer.last_name, customer.last_name, ' \
-              'account.account_id, account.account_type, account.amount from customer inner join account ' \
-              'on account.customer_id = customer.customer_id order by account.account_id'
+        sql = 'select * from "python-banking-app".customer order by customer_id'
         cursor = connection.cursor()
         cursor.execute(sql)
         customer_records = cursor.fetchall()
@@ -35,49 +33,54 @@ class CustomerPostgresDAO(CustomerDao):
         return customers
 
     def get_customer_balance_by_id(self, customer_id: int, account_id: int) -> float:
-        sql = 'select amount from account where account_id = %s and customer_id = %s'
+        sql = 'select amount from "python-banking-app".account where account_id = %s and customer_id = %s'
         cursor = connection.cursor()
         cursor.execute(sql, (account_id, customer_id))
         customer_record = cursor.fetchone()
         return customer_record
 
-    def deposit_into_account_by_id(self, customer_id: int, account_id: int, amount: int) -> float:
-        new_balance = self.get_customer_balance_by_id(customer_id, account_id) + amount
-        sql = 'update account set amount = %s where account_id = %s and customer_id = %s'
+    def deposit_into_account_by_id(self, customer_id: int, account_id: int, deposit: float) -> float:
+        sql = 'update "python-banking-app".account set amount = %s + amount where account_id = %s ' \
+              'and customer_id = %s returning amount'
         cursor = connection.cursor()
-        cursor.execute(sql, (new_balance, account_id, customer_id))
+        cursor.execute(sql, (deposit, account_id, customer_id))
         connection.commit()
-        return new_balance
+        customer_record = cursor.fetchone()
+        return customer_record
 
-    def withdraw_from_account_by_id(self, customer_id: int, account_id: int, amount: int) -> float:
-        new_balance = self.get_customer_balance_by_id(customer_id, account_id) - amount
-        sql = 'update account set amount = %s where account_id = %s and customer_id = %s'
+    def withdraw_from_account_by_id(self, customer_id: int, account_id: int, withdraw: float) -> float:
+        sql = 'update "python-banking-app".account set amount = amount - %s where account_id = %s and customer_id = %s ' \
+              'returning amount'
         cursor = connection.cursor()
-        cursor.execute(sql, (new_balance, account_id, customer_id))
+        cursor.execute(sql, (withdraw, account_id, customer_id))
         connection.commit()
-        return new_balance
+        customer_record = cursor.fetchone()
+        return customer_record
 
-    def transfer_money_by_their_ids(self, customer_id: int, from_account_id: int, to_account_id: int, amount: int) -> \
-            float:
-        self.withdraw_from_account_by_id(customer_id, from_account_id, amount)
-        self.deposit_into_account_by_id(customer_id, to_account_id, amount)
-        new_balance = self.get_customer_balance_by_id(customer_id, to_account_id)
-        sql = 'update account set amount = %s where account_id = %s and customer_id = %s'
+    def transfer_money_by_their_ids(self, customer_id: int, from_account_id: int, to_account_id: int,
+                                    transfer_amount: float) -> float:
+        self.withdraw_from_account_by_id(customer_id, from_account_id, transfer_amount)
+        self.deposit_into_account_by_id(customer_id, to_account_id, transfer_amount)
+        sql = 'update "python-banking-app".account set amount = %s + amount where account_id = %s and ' \
+              'customer_id = %s returning amount'
         cursor = connection.cursor()
-        cursor.execute(sql, (new_balance, to_account_id, customer_id))
+        cursor.execute(sql, (transfer_amount, to_account_id, customer_id))
         connection.commit()
-        return new_balance
+        customer_record = cursor.fetchone()
+        return customer_record
 
     def update_customer_by_id(self, customer_id: int, customer: Customer) -> Customer:
-        sql = 'update customer set first_name = %s, last_name = %s, user_name = %s where customer_id = %s'
+        sql = 'update "python-banking-app".customer set first_name = %s, last_name = %s, user_name = %s ' \
+              'where customer_id = %s'
         cursor = connection.cursor()
         cursor.execute(sql, (customer.first_name, customer.last_name, customer.user_name, customer.customer_id))
         connection.commit()
         return customer
 
     def delete_customer_by_id(self, customer_id: int) -> bool:
-        sql = 'delete from customer where customer_id = %s'
+        sql = 'delete from "python-banking-app".customer where customer_id = %s'
         cursor = connection.cursor()
         cursor.execute(sql, [customer_id])
         connection.commit()
         return True
+

@@ -8,7 +8,7 @@ from typing import List
 
 
 class CustomerPostgresServiceImp(CustomerService):
-    def __int__(self, customer_dao: CustomerPostgresDAO):
+    def __init__(self, customer_dao: CustomerPostgresDAO):
         self.customer_dao = customer_dao
 
     def service_create_customer_entry(self, customer: Customer) -> Customer:
@@ -35,30 +35,36 @@ class CustomerPostgresServiceImp(CustomerService):
             raise CustomerNotFoundException("This account was not found")
         return balance
 
-    def service_deposit_into_account_by_id(self, customer_id: int, account_id: int, amount: int) -> float:
+    def service_deposit_into_account_by_id(self, customer_id: int, account_id: int, amount: float) -> float:
         if amount <= 0:
             raise InvalidTransactionException("This is not a valid transaction")
         return self.customer_dao.deposit_into_account_by_id(customer_id, account_id, amount)
 
-    def service_withdraw_from_account_by_id(self, customer_id: int, account_id: int, amount: int) -> float:
+    def service_withdraw_from_account_by_id(self, customer_id: int, account_id: int, amount: float) -> float:
         balance = self.customer_dao.get_customer_balance_by_id(customer_id, account_id)
-        if amount >= balance:
+        float_balance = float('.'.join(str(elem) for elem in balance))
+        if amount > float_balance:
             raise InvalidTransactionException("This is not a valid transaction")
         return self.customer_dao.withdraw_from_account_by_id(customer_id, account_id, amount)
 
     def service_transfer_money_by_their_ids(self, customer_id: int, from_account_id: int, to_account_id: int,
-                                            amount: int) -> float:
+                                            amount: float) -> float:
         balance = self.customer_dao.get_customer_balance_by_id(customer_id, from_account_id)
-        if amount >= balance:
+        float_balance = float('.'.join(str(elem) for elem in balance))
+        if amount > float_balance:
             raise InvalidTransactionException("This is not a valid transaction")
         return self.customer_dao.transfer_money_by_their_ids(customer_id, from_account_id, to_account_id, amount)
 
     def service_update_customer_by_id(self, customer_id: int, customer: Customer) -> Customer:
-        if self.customer_dao.get_customer_by_id(customer_id) is None:
-            raise CustomerNotFoundException("This account was not found")
-        return self.customer_dao.update_customer_by_id(customer_id, customer)
+        customers = self.customer_dao.get_all_customers()
+        for customer in customers:
+            if customer.customer_id == customer_id:
+                return self.customer_dao.update_customer_by_id(customer_id, customer)
+        raise CustomerNotFoundException("This account was not found")
 
     def service_delete_customer_by_id(self, customer_id: int) -> bool:
-        if self.customer_dao.get_customer_by_id(customer_id) is None:
-            raise CustomerNotFoundException("This account was not found")
-        return self.customer_dao.delete_customer_by_id(customer_id)
+        customers = self.customer_dao.get_all_customers()
+        for customer in customers:
+            if customer.customer_id == customer_id:
+                return self.customer_dao.delete_customer_by_id(customer_id)
+        raise CustomerNotFoundException("This account was not found")

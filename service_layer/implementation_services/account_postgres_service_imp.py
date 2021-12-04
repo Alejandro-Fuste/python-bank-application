@@ -7,13 +7,13 @@ from typing import List
 
 
 class AccountPostgresServiceImp(AccountService):
-    def __int__(self, account_dao: AccountPostgresDAO):
+    def __init__(self, account_dao: AccountPostgresDAO):
         self.account_dao = account_dao
 
     def service_create_account(self, account: Account) -> Account:
-        accounts = self.service_get_all_accounts()
+        accounts = self.account_dao.get_all_accounts()
         for current_account in accounts:
-            if current_account.account_id == account.account_id:
+            if current_account.account_type == account.account_type:
                 raise DuplicateCustomerException("That account has already been created")
         created_account = self.account_dao.create_account(account)
         return created_account
@@ -22,11 +22,16 @@ class AccountPostgresServiceImp(AccountService):
         return self.account_dao.get_all_accounts()
 
     def service_get_all_customer_accounts_by_id(self, customer_id: int) -> List[Account]:
-        if self.account_dao.get_all_customer_accounts_by_id(customer_id) is None:
-            raise CustomerNotFoundException("This account was not found")
-        return self.account_dao.get_all_customer_accounts_by_id(customer_id)
+        accounts = self.account_dao.get_all_accounts()
+        for current_account in accounts:
+            if current_account.customer_id == customer_id:
+                return self.account_dao.get_all_customer_accounts_by_id(customer_id)
+        raise CustomerNotFoundException("This account was not found")
 
     def service_delete_account_by_id(self, customer_id: int, account_id: int) -> bool:
-        if self.account_dao.get_all_customer_accounts_by_id(customer_id) is None:
-            raise CustomerNotFoundException("This account was not found")
-        return self.account_dao.delete_account_by_id(customer_id, account_id)
+        accounts = self.account_dao.get_all_accounts()
+        for current_account in accounts:
+            if current_account.account_id == account_id:
+                return self.account_dao.delete_account_by_id(customer_id, account_id)
+        raise CustomerNotFoundException("This account was not found")
+

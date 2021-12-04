@@ -8,7 +8,7 @@ from util.database_connection import connection
 class AccountPostgresDAO(AccountDao):
 
     def create_account(self, account: Account) -> Account:
-        sql = 'insert into account values(default, %s, %s, %s) returning account_id'
+        sql = 'insert into "python-banking-app".account values(default, %s, %s, %s) returning account_id'
         cursor = connection.cursor()
         cursor.execute(sql, (account.account_type, account.amount, account.customer_id))
         connection.commit()
@@ -17,8 +17,7 @@ class AccountPostgresDAO(AccountDao):
         return account
 
     def get_all_accounts(self) -> List[Account]:
-        sql = 'select * from account inner join customer on customer.customer_id = account.customer_id ' \
-              'order by account.account_id'
+        sql = 'select * from "python-banking-app".account order by account_id'
         cursor = connection.cursor()
         cursor.execute(sql)
         account_records = cursor.fetchall()
@@ -28,8 +27,7 @@ class AccountPostgresDAO(AccountDao):
         return accounts
 
     def get_all_customer_accounts_by_id(self, customer_id: int) -> List[Account]:
-        sql = 'select * from account inner join customer on customer.customer_id = account.customer_id ' \
-              'where account.customer_id = 1 order by account.account_id'
+        sql = 'select * from "python-banking-app".account where customer_id = 1 order by account_id'
         cursor = connection.cursor()
         cursor.execute(sql)
         account_records = cursor.fetchall()
@@ -39,7 +37,7 @@ class AccountPostgresDAO(AccountDao):
         return accounts
 
     def delete_account_by_id(self, customer_id: int, account_id: int) -> bool:
-        sql = 'delete from account where account_id = %s and customer_id = %s'
+        sql = 'delete from "python-banking-app".account where account_id = %s and customer_id = %s'
         cursor = connection.cursor()
         cursor.execute(sql, (account_id, customer_id))
         connection.commit()

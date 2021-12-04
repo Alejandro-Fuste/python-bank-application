@@ -18,20 +18,12 @@ def test_duplicate_account_for_create_account():
         assert str(e) == "That account has already been created"
 
 
-def test_no_results_for_get_all_accounts():
-    try:
-        account_service.service_get_all_accounts()
-        assert False
-    except CustomerNotFoundException as e:
-        assert str(e) == "These accounts were not found"
-
-
 def test_not_found_for_get_all_customer_accounts_by_id():
     try:
-        account_service.service_get_all_customer_accounts_by_id(1)
+        account_service.service_get_all_customer_accounts_by_id(100)
         assert False
     except CustomerNotFoundException as e:
-        assert str(e) == "These accounts were not found"
+        assert str(e) == "This account was not found"
 
 
 def test_validate_delete_account_method():
